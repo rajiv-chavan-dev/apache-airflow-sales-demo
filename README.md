@@ -41,7 +41,7 @@ Before you begin, ensure you have met the following requirements:
 
 
 # usage
-- first create table in postgresql
+- First create table in postgresql
     CREATE TABLE IF NOT EXISTS public.demo
     (
     "Index" integer NOT NULL,
