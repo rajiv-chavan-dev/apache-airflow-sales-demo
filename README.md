@@ -41,9 +41,28 @@ Before you begin, ensure you have met the following requirements:
 
 
 # usage
+- first create table in postgresql
+    CREATE TABLE IF NOT EXISTS public.demo
+    (
+    "Index" integer NOT NULL,
+    "Organization_Id" character varying(150) COLLATE pg_catalog."default" NOT NULL,
+    "Name" character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    "Website" character varying(300) COLLATE pg_catalog."default" NOT NULL,
+    "Country" character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    "Description" character varying(400) COLLATE pg_catalog."default" NOT NULL,
+    "Founded" character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "Industry" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "Number_of_employees" character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT demo_pkey PRIMARY KEY ("Index")
+    )
 - Run the dags inside script python3 bulk-insert-csv.py
-- Start the Airflow web server and scheduler:
+
+- Start the Airflow web server and scheduler
+
 - Access the Airflow web UI by opening a web browser and navigating to http://localhost:8080.
+
 - Browse and enable the CSV import DAGs provided in this project.
+
 - Configure the DAGs with the necessary parameters, such as the database connection and CSV file path.
+
 - Trigger or schedule the DAGs to import CSV data into your database automatically. 
